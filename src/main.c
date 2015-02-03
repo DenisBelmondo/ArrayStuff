@@ -63,9 +63,8 @@ int main()
  * must do to retrieve the amount of bytes in an int without the use
  * of a magic number, is this: sizeof(i[0]) which would get the number
  * of bytes in the first value of the array. Dividing the total sum of
- * bytes in the array which is [number of elements] * 4, you'd have to
- * divide all of that by 4 to get just the number of elements. That's
- * what this is doing.
+ * bytes in the array which is [number of elements] * 4, you'd get just 
+ * the number of elements. That's what this is doing.
  *  
  * Furthermore, make sure you make sure the limit of rndPos doesn't
  * exceed the limit of the array because you'll end up with something
@@ -76,7 +75,7 @@ int main()
 void rndPrint()
 {
 
-	for (rndPos = 0; rndPos <= (sizeof(rndTable) / sizeof(rndTable[0]))-1; rndPos++) {
+	for (rndPos = 0; rndPos <= (sizeof(rndTable) / sizeof(rndTable[0])) - 1; rndPos++) {
 		printf("%d\n", rndTable[rndPos]);
 	}
 
